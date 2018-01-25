@@ -1,0 +1,14 @@
+<div class="nav">
+  <a routerLink="/create">Create new Product</a>
+</div>
+
+<div class="todo-list">
+  <h1>All products</h1>
+  <ul>
+    <li *ngFor="let product of products | async">
+      <a routerLink="/edit/{{product.key}}">{{product.title}}</a>
+      <p>{{product.desc}}</p>
+      <p>{{product.price}}</p>
+    </li>
+  </ul>
+</div>

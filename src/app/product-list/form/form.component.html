@@ -1,15 +1,20 @@
 <div class="product">
+  <div class="form-group">
+    <label for="">Image</label><br>
+    <input type="file" name="file" (change)="onChange($event)" value="">
+  </div>
+
   <form (ngSubmit) = "onSubmit(pav)" #pav="ngForm">
     <div class="form-group">
-      <label for="">Title</label>
+      <label for="">Title</label><br>
       <input type="text" name="title" value="" [(ngModel)] = "product.title">
     </div>
     <div class="forme-group">
-      <label for="">Description</label>
+      <label for="">Description</label><br>
       <textarea type="text" name="desc" rows="8" cols="80" [(ngModel)] = "product.desc"></textarea>
     </div>
     <div class="forme-group">
-      <label for="">Price</label>
+      <label for="">Price</label><br>
       <input type="number" name="price" value="" [(ngModel)] = "product.price">
     </div>
     <div class="form_group">

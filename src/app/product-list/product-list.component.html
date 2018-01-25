@@ -7,6 +7,7 @@
   <ul>
     <li *ngFor="let product of products | async">
       <a routerLink="/edit/{{product.key}}">{{product.title}}</a>
+      <img src="{{ product.url}}" width="300px" alt="">
       <p>{{product.desc}}</p>
       <p>{{product.price}}</p>
     </li>
